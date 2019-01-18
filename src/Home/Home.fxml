@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="splashAnchorPane" prefHeight="564.0" prefWidth="984.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.HomeController">
+   <children>
+      <TextField fx:id="surname" layoutX="24.0" layoutY="73.0" prefHeight="25.0" prefWidth="169.0" promptText="Surname" />
+      <TextField fx:id="phone2" layoutX="27.0" layoutY="252.0" prefHeight="25.0" prefWidth="305.0" promptText="Next Of Kin Number" />
+      <TextField fx:id="middle" layoutX="220.0" layoutY="73.0" prefHeight="25.0" prefWidth="169.0" promptText="Middlename" />
+      <TextField fx:id="other2" layoutX="24.0" layoutY="111.0" prefHeight="25.0" prefWidth="249.0" promptText="Others" />
+      <TextField fx:id="phone" layoutX="27.0" layoutY="179.0" prefHeight="25.0" prefWidth="305.0" promptText="Phone Number" />
+      <JFXRadioButton fx:id="male" layoutX="14.0" layoutY="147.0" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gen" />
+         </toggleGroup></JFXRadioButton>
+      <JFXRadioButton fx:id="female" layoutX="141.0" layoutY="147.0" text="Female" toggleGroup="$gen" />
+      <Text layoutX="36.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Symptoms">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+         </font>
+      </Text>
+      <JFXCheckBox fx:id="chill" layoutX="29.0" layoutY="319.0" onMouseEntered="#shakin" onMouseExited="#shaking" text="Shaking Chills" />
+      <JFXCheckBox fx:id="fever" layoutX="27.0" layoutY="357.0" onMouseEntered="#feverin" onMouseExited="#fiverout" text="High Fever" />
+      <JFXCheckBox fx:id="Anemia" layoutX="148.0" layoutY="355.0" onMouseEntered="#anemiain" onMouseExited="#anemiaout" text="Anemia" />
+      <JFXCheckBox fx:id="diarrhea" layoutX="26.0" layoutY="397.0" onMouseEntered="#diariain" onMouseExited="#diariaout" text="Diarrhea" />
+      <JFXCheckBox fx:id="Mpain" layoutX="25.0" layoutY="439.0" onMouseEntered="#painin" onMouseExited="#painout" text="Muscle Pain" />
+      <JFXCheckBox fx:id="bloodStool" layoutX="148.0" layoutY="319.0" onMouseEntered="#bloodystoolin" onMouseExited="#bloodystoolout" text="Bloody Stools" />
+      <JFXCheckBox fx:id="Abdopain" layoutX="148.0" layoutY="392.0" onMouseEntered="#abdominalpainin" onMouseExited="#abdominalpainout" text="abdominal pain" />
+      <JFXCheckBox fx:id="nausea" layoutX="148.0" layoutY="433.0" onMouseEntered="#nauseain" onMouseExited="#nauseaout" text="Nausea" />
+      <AnchorPane layoutX="341.0" layoutY="430.0" prefHeight="88.0" prefWidth="305.0" styleClass="card">
+         <children>
+            <Text layoutX="73.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Information Tab">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="infoTab" layoutX="-1.0" layoutY="22.0" prefHeight="66.0" prefWidth="305.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextArea>
+         </children>
+      </AnchorPane>
+      <JFXCheckBox fx:id="fatigue" layoutX="25.0" layoutY="480.0" onMouseEntered="#fatiguein" onMouseExited="#fatigueout" text="Fatigue" />
+      <AnchorPane layoutX="572.0" layoutY="46.0" prefHeight="379.0" prefWidth="440.0" style="-fx-background-color: white; -fx-border-color: #3083a4;">
+         <children>
+            <Text layoutX="161.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="26.0" prefHeight="320.0" prefWidth="399.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="103.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="314.0" minWidth="10.0" prefWidth="296.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SYMPTOMS">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" INFECTION" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="10.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" DRUG" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" TEST" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="10.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONFIRMATION" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="malariaStatus" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea fx:id="malariaType" editable="false" layoutX="128.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea fx:id="malariaEffect" editable="false" layoutX="128.0" layoutY="60.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea fx:id="anemiaStatus" editable="false" layoutX="128.0" layoutY="110.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea fx:id="others" editable="false" layoutX="128.0" layoutY="160.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </GridPane>
+            <JFXButton fx:id="clearReport" layoutX="307.0" layoutY="350.0" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: yellow;" text="New Report" textFill="#0a0a0a">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="Print" layoutX="206.0" layoutY="350.0" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: yellow;" text="Print Report" textFill="#0a0a0a">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="861.0" layoutY="461.0" onAction="#diagnostics" prefHeight="37.0" prefWidth="98.0" style="-fx-background-color: yellow;" text="Diagnosis" textFill="#0a0a0a">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="bar" layoutX="402.0" layoutY="38.0" prefHeight="25.0" prefWidth="36.0" text="0.00" />
+      <JFXCheckBox fx:id="appetite" layoutX="148.0" layoutY="479.0" onMouseEntered="#appein" onMouseExited="#appeout" text="Poor Appetite" />
+      <JFXCheckBox fx:id="Lethargy" layoutX="264.0" layoutY="350.0" onMouseEntered="#lategyin" onMouseExited="#lategyout" text="Lethargy" />
+      <JFXCheckBox fx:id="Headache" layoutX="267.0" layoutY="394.0" onMouseEntered="#headin" onMouseExited="#headout" text="HeadAche" />
+      <AnchorPane layoutX="8.0" layoutY="-1.0" prefHeight="44.0" prefWidth="1028.0" style="-fx-background-color: #3083a4;">
+         <children>
+            <TextArea fx:id="symtomsField1" layoutX="69.0" layoutY="3.0" prefHeight="13.0" prefWidth="56.0" />
+            <TextArea fx:id="symtomsField" layoutX="59.0" prefHeight="13.0" prefWidth="56.0" />
+            <ImageView fitHeight="38.0" fitWidth="36.0" layoutX="1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_User_50px.png" />
+               </image></ImageView>
+            <Text fill="#f5e7e7" layoutX="180.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Malaria and Typhiod Assessment System">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="33.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="49.0" layoutY="-2.0" prefHeight="46.0" prefWidth="100.0" style="-fx-background-color: #3083a4;" />
+         </children>
+      </AnchorPane>
+      <Text fx:id="id" layoutX="16.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="openTest" layoutX="272.0" layoutY="445.0" style="-fx-background-color: green;" text="Test" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="16.0" fitWidth="13.0" layoutX="292.0" layoutY="483.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8_Copyright_52px.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="exit" layoutX="858.0" layoutY="535.0" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: red;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="phone1" layoutX="29.0" layoutY="213.0" prefHeight="25.0" prefWidth="61.0" promptText="Age" />
+      <AnchorPane fx:id="feverpane" layoutX="36.0" layoutY="215.0" prefHeight="134.0" prefWidth="249.0" style="-fx-background-color: white;">
+         <children>
+            <JFXCheckBox fx:id="weakFever" layoutX="14.0" layoutY="11.0" text="Weak" />
+            <JFXCheckBox fx:id="LOAfever" layoutX="14.0" layoutY="38.0" text="Loss of Appetite" />
+            <JFXCheckBox fx:id="SweatingFever" layoutX="141.0" layoutY="11.0" text="Sweating" />
+            <JFXCheckBox fx:id="HeadFever" layoutX="14.0" layoutY="71.0" text="HeadAche" />
+            <JFXCheckBox fx:id="VimitingFever" layoutX="14.0" layoutY="102.0" text="Vomiting" />
+            <JFXCheckBox fx:id="MAchesFever" layoutX="141.0" layoutY="47.0" text="Muscle Aches" />
+            <JFXButton fx:id="close" layoutX="181.0" layoutY="102.0" style="-fx-background-color: green;" text="Submit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="testPane" layoutX="197.0" layoutY="44.0" prefHeight="370.0" prefWidth="383.0" style="-fx-background-color: #3083a4; -fx-background-radius: 10px;">
+         <children>
+            <Text fill="WHITE" layoutX="129.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TESTS REPORT" wrappingWidth="145.0">
+               <font>
+                  <Font name="BatangChe" size="22.0" />
+               </font>
+            </Text>
+            <JFXRadioButton fx:id="c" layoutX="126.0" layoutY="69.0" text="Positive">
+               <toggleGroup>
+                  <ToggleGroup fx:id="dot" />
+               </toggleGroup></JFXRadioButton>
+            <JFXRadioButton fx:id="d" layoutX="240.0" layoutY="67.0" text="Negative" toggleGroup="$dot" />
+            <JFXButton fx:id="closeTest" layoutX="310.0" layoutY="337.0" onAction="#close" style="-fx-background-color: green;" text="Submit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXRadioButton fx:id="h" layoutX="111.0" layoutY="247.0" text="Positive">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rapid" />
+               </toggleGroup></JFXRadioButton>
+            <JFXRadioButton fx:id="i" layoutX="201.0" layoutY="248.0" text="Negative" toggleGroup="$rapid" />
+            <JFXRadioButton fx:id="e" layoutX="124.0" layoutY="99.0" text="Positive">
+               <toggleGroup>
+                  <ToggleGroup fx:id="sme" />
+               </toggleGroup></JFXRadioButton>
+            <JFXRadioButton fx:id="g" layoutX="278.0" layoutY="99.0" text="Negative" toggleGroup="$sme" />
+            <TextField fx:id="f" layoutX="217.0" layoutY="97.0" prefHeight="25.0" prefWidth="66.0" promptText="Rate" />
+            <JFXRadioButton fx:id="j" layoutX="132.0" layoutY="128.0" text="Low">
+               <toggleGroup>
+                  <ToggleGroup fx:id="mole" />
+               </toggleGroup></JFXRadioButton>
+            <JFXRadioButton fx:id="l" layoutX="289.0" layoutY="130.0" text="High" toggleGroup="$mole" />
+            <JFXRadioButton fx:id="k" layoutX="198.0" layoutY="129.0" text="Medium" toggleGroup="$mole" />
+            <JFXRadioButton fx:id="m" layoutX="129.0" layoutY="279.0" text="Present">
+               <toggleGroup>
+                  <ToggleGroup fx:id="anti" />
+               </toggleGroup></JFXRadioButton>
+            <JFXRadioButton fx:id="n" layoutX="207.0" layoutY="280.0" text="Absent" toggleGroup="$anti" />
+            <JFXRadioButton fx:id="o" layoutX="143.0" layoutY="310.0" text="Positive">
+               <toggleGroup>
+                  <ToggleGroup fx:id="parA" />
+               </toggleGroup></JFXRadioButton>
+            <JFXRadioButton fx:id="p" layoutX="289.0" layoutY="310.0" text="Negative" toggleGroup="$parA" />
+            <TextField fx:id="a" layoutX="115.0" layoutY="32.0" prefHeight="25.0" prefWidth="100.0" promptText="Parasite Count" />
+            <TextField fx:id="f1" layoutX="128.0" layoutY="161.0" prefHeight="25.0" prefWidth="108.0" promptText="Sensitivity" />
+            <TextField fx:id="f11" layoutX="125.0" layoutY="201.0" prefHeight="25.0" prefWidth="111.0" promptText="Specificity" />
+            <TextField fx:id="bo" layoutX="267.0" layoutY="161.0" prefHeight="25.0" prefWidth="78.0" promptText="PPV" />
+            <TextField fx:id="b" layoutX="267.0" layoutY="201.0" prefHeight="25.0" prefWidth="78.0" promptText="NPV" />
+            <JFXCheckBox fx:id="ur" layoutX="15.0" layoutY="33.0" text="Urinalisis" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="wi" layoutX="13.0" layoutY="159.0" text="Widal Test" textFill="#fffefe">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="ty" layoutX="15.0" layoutY="66.0" text="Typhidot" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="bl" layoutX="15.0" layoutY="98.0" text="Blood Smear" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="rd" layoutX="15.0" layoutY="245.0" text="RDT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="mo" layoutX="14.0" layoutY="127.0" text="Molecular Test" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="an" layoutX="15.0" layoutY="279.0" text="Antibody Test" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="mp" layoutX="15.0" layoutY="311.0" text="Malaria Parasite" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXCheckBox>
+            <Separator layoutX="4.0" layoutY="233.0" prefHeight="0.0" prefWidth="376.0" />
+            <TextField fx:id="f2" layoutX="234.0" layoutY="306.0" prefHeight="25.0" prefWidth="56.0" promptText="PC" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

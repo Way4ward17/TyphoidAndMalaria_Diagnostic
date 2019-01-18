@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="15bdc5e1-8989-4d55-b572-2fe00297af54">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="145"/>
+	<queryString>
+		<![CDATA[select * from report]]>
+	</queryString>
+	<field name="SURNAME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MIDDLENAME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OTHER" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="GENDER" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PHONE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PHONE2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="STATUS" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TYPE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EFFECT" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ANEMIA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OTHERS" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="59" width="152" height="20" uuid="e087b4a5-2486-4541-af0a-dc98e7d50f38"/>
+				<textFieldExpression><![CDATA[$F{SURNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="163" y="59" width="136" height="20" uuid="c7f71c12-ea07-46db-939a-de6587864b28"/>
+				<textFieldExpression><![CDATA[$F{MIDDLENAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="307" y="59" width="216" height="20" uuid="e9adb26f-8b6e-49aa-ae6e-7c0653cff802"/>
+				<textFieldExpression><![CDATA[$F{OTHER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="85" y="0" width="364" height="40" uuid="9fb2c907-eadd-409f-b06b-faaabe9b4c7b"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TUTU DIAGNOSTIC CENTER]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="15" width="100" height="20" uuid="c3f662e0-7773-42e2-ad95-c2b2ad37a3fe"/>
+				<textFieldExpression><![CDATA[$F{GENDER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="109" y="15" width="134" height="20" uuid="7087cf83-ff4d-4a6b-8b1a-4d6bca77fc0a"/>
+				<text><![CDATA[PHONE]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="134" y="20" width="206" height="20" uuid="7ee7378b-8fa0-4f81-9ea6-fd3bc87dcae8"/>
+				<textFieldExpression><![CDATA[$F{PHONE2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="20" width="100" height="20" uuid="c52e6e95-1930-441d-b286-c21d760d2773"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NEXT OF KIN NO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="357" splitType="Stretch">
+			<textField>
+				<reportElement x="243" y="0" width="301" height="20" uuid="d2db37e2-7b4c-4b58-8fa1-032740240d65"/>
+				<textFieldExpression><![CDATA[$F{STATUS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="243" y="42" width="301" height="20" uuid="ef020a0d-91f3-402c-840f-0b8a766336b0"/>
+				<textFieldExpression><![CDATA[$F{TYPE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="243" y="76" width="301" height="58" uuid="ec4ef440-0082-4ee3-927a-138e9d04d9bf"/>
+				<textFieldExpression><![CDATA[$F{EFFECT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="243" y="144" width="305" height="64" uuid="6dfb9c62-b2cf-48ba-aa16-ba7f3ba28888"/>
+				<textFieldExpression><![CDATA[$F{ANEMIA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="243" y="220" width="305" height="65" uuid="07cc72ad-e138-4912-8f8d-0690127458dd"/>
+				<textFieldExpression><![CDATA[$F{OTHERS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="0" width="100" height="20" uuid="a5bfa854-7113-4d77-ab38-5cfa45c87366"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SYMTOMS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="38" width="100" height="20" uuid="8ca7197c-4407-4ed8-bfee-2201be016915"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFECTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="76" width="133" height="20" uuid="c519b674-4f32-4888-bd69-aed14c7b0bb4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DRUGS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="144" width="100" height="20" uuid="1a0a4637-4541-46ed-9bfc-c3c234cc28d9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TEST]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="218" width="100" height="20" uuid="6e9ea8d1-79e0-4737-978b-1500a3020630"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONFIRMATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="336" width="100" height="20" uuid="14097a98-842e-4ed5-89a9-05af9b9f80a2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SIGNATURE & DATE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="151" y="331" width="268" height="1" uuid="c270b7d4-dc43-45a6-99d2-011f9e6240d2"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="73" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
